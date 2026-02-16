@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deepanshu | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Loader -->
+  <div class="loader" id="loader">
+    <div class="loader-card">
+      <div class="loader-logo"></div>
+      <div class="loader-title">Deepanshu</div>
+      <div class="loader-sub">Loading portfolio…</div>
+      <div class="loader-bar"><span></span></div>
+    </div>
+  </div>
+
+  <!-- Liquid blobs -->
+  <div class="liquid" aria-hidden="true">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+  </div>
+
+  <!-- Floating code -->
+  <div class="code-bg" aria-hidden="true" id="codeBg">
+    <span>const</span><span>let</span><span>function()</span><span>return</span><span>if()</span><span>else</span><span>for()</span><span>while()</span>
+    <span>console.log()</span><span>async</span><span>await</span><span>try {}</span><span>catch(e)</span><span>import</span><span>export</span>
+    <span>class</span><span>public static</span><span>def</span><span>print()</span><span>lambda</span><span>pip install</span><span>git push</span>
+    <span>npm i</span><span>docker run</span><span>SELECT *</span><span>WHERE</span><span>JOIN</span><span>O(log n)</span><span>DFS()</span><span>BFS()</span>
+    <span>JSON</span><span>JWT</span><span>Django</span><span>React</span><span>Node.js</span><span>malloc()</span><span>vector&lt;int&gt;</span>
+    <span>#include&lt;bits/stdc++.h&gt;</span><span>int main()</span><span>System.out.println()</span><span>sudo</span><span>kubectl</span>
+    <span>POST /api</span><span>200 OK</span><span>git commit</span><span>merge</span><span>rebase</span><span>tail -f</span><span>chmod +x</span>
+    <span>cd ..</span><span>ls -la</span><span>npm run dev</span>
+  </div>
+
+  <!-- ✅ Hire Me modal (full screen) -->
+  <div class="modal" id="hireModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close="hire"></div>
+
+    <div class="modal-window glass" role="dialog" aria-modal="true" aria-labelledby="hireTitle">
+      <button class="mac-close" id="hireClose" type="button" aria-label="Close">×</button>
+
+      <div class="modal-head">
+        <h2 id="hireTitle">Work With Me</h2>
+        <p class="muted">Freelance / Project Build • Clean UI • Fast delivery • Support included</p>
+      </div>
+
+      explains?
+
+      <div class="pricing-grid">
+        <div class="price-card glass-soft">
+          <div class="price-top">
+            <div class="price-badge">Starter</div>
+            <div class="price-tag">₹3,999</div>
+          </div>
+          <div class="price-sub muted">Best for small tasks</div>
+          <ul class="price-list">
+            <li>Bug fixes / small features</li>
+            <li>1 page / small component</li>
+            <li>1 revision</li>
+            <li>Delivery: 1–2 days</li>
+          </ul>
+          <button class="btn primary price-cta" data-hire="starter" type="button">Choose Starter</button>
+        </div>
+
+        <div class="price-card glass-soft popular">
+          <div class="price-top">
+            <div class="price-badge">Pro</div>
+            <div class="price-tag">₹9,999</div>
+          </div>
+          <div class="price-sub muted">Most popular</div>
+          <ul class="price-list">
+            <li>Full landing page / portfolio</li>
+            <li>Responsive + animations</li>
+            <li>Form integration (Google Apps Script)</li>
+            <li>3 revisions</li>
+            <li>Delivery: 3–5 days</li>
+          </ul>
+          <button class="btn primary price-cta" data-hire="pro" type="button">Choose Pro</button>
+        </div>
+
+        <div class="price-card glass-soft">
+          <div class="price-top">
+            <div class="price-badge">Premium</div>
+            <div class="price-tag">₹24,999+</div>
+          </div>
+          <div class="price-sub muted">For full apps</div>
+          <ul class="price-list">
+            <li>Frontend + Backend (API)</li>
+            <li>Auth, DB, admin panel</li>
+            <li>Deployment help</li>
+            <li>Support: 7 days</li>
+            <li>Delivery: depends on scope</li>
+          </ul>
+          <button class="btn primary price-cta" data-hire="premium" type="button">Choose Premium</button>
+        </div>
+      </div>
+
+      <div class="modal-foot glass-soft">
+        <div class="muted">
+          💬 To start: click a plan → it will auto-scroll to contact and prefill your message.
+        </div>
+        <div class="modal-actions">
+          <a class="btn" href="#projects" data-close="hire">View Work</a>
+          <a class="btn primary" href="#contact" data-close="hire">Contact Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap page" id="page">
+    <div class="topbar">
+      <div class="nav">
+        <div class="brand">
+          <div class="logo"></div>
+          <div>
+            <div class="brand-name">Deepanshu</div>
+            <div class="brand-sub">Portfolio</div>
+          </div>
+        </div>
+
+        <div class="links">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#timeline">Timeline</a>
+          <a href="#contact">Contact</a>
+          <button class="nav-hire" id="hireOpen" type="button">Hire Me</button>
+        </div>
+      </div>
+    </div>
+
+    <main class="container">
+      <div class="hero">
+        <div class="card glass">
+          <h1>Hi, I'm <span class="neon">Deepanshu</span></h1>
+          <p class="muted">C/C++ • Java • Full Stack Developer • Python • AI/ML</p>
+          <p>I build fast, modern and premium web experiences.</p>
+
+          <div class="hero-actions">
+            <a class="btn primary" href="#projects">View Projects</a>
+            <a class="btn" href="#contact">Contact</a>
+            <button class="btn hire" id="hireOpen2" type="button">Hire Me</button>
+
+            <div class="icon-links" aria-label="Social links">
+              <a class="icon-btn compact" href="https://github.com/anshh-4886" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
+              </a>
+              <a class="icon-btn compact" href="https://www.linkedin.com/in/deepanshu-gupta-ba4076281" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn">
+              </a>
+            </div>
+          </div>
+
+          <!-- Stats -->
+          <div class="stats">
+            <div class="stat glass-soft reveal">
+              <div class="stat-top">
+                <div class="stat-label">Projects</div>
+                <div class="stat-num">5<span class="plus">+</span></div>
+              </div>
+              <div class="stat-bar"><span style="--w:72%"></span></div>
+              <div class="stat-foot muted">Shipped repos & prototypes</div>
+            </div>
+
+            <div class="stat glass-soft reveal">
+              <div class="stat-top">
+                <div class="stat-label">Tech Stack</div>
+                <div class="stat-num">12<span class="plus">+</span></div>
+              </div>
+              <div class="stat-bar"><span style="--w:82%"></span></div>
+              <div class="stat-foot muted">Languages + tools</div>
+            </div>
+
+            <div class="stat glass-soft reveal">
+              <div class="stat-top">
+                <div class="stat-label">AI / CV</div>
+                <div class="stat-num">4<span class="plus">+</span></div>
+              </div>
+              <div class="stat-bar"><span style="--w:64%"></span></div>
+              <div class="stat-foot muted">Vision + AI builds</div>
+            </div>
+
+            <div class="stat ring glass-soft reveal" data-ring="82" style="--p:82">
+              <div class="ring-wrap">
+                <svg class="ring-svg" viewBox="0 0 120 120" aria-hidden="true">
+                  <circle class="ring-bg" cx="60" cy="60" r="46"></circle>
+                  <circle class="ring-fg" cx="60" cy="60" r="46"></circle>
+                </svg>
+
+                <div class="ring-center">
+                  <div class="ring-value">82%</div>
+                </div>
+              </div>
+
+              <div class="ring-caption">
+                <div class="ring-title">Consistency</div>
+                <div class="ring-sub">Daily learning + building</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card glass">
+          <div class="avatar">
+            <img src="me.jpeg" alt="Deepanshu" onerror="this.style.display='none';">
+          </div>
+
+          <div class="mini-badges">
+            <span class="badge">AI/ML</span>
+            <span class="badge">Full Stack</span>
+            <span class="badge">OpenCV</span>
+            <span class="badge">DSA</span>
+          </div>
+        </div>
+      </div>
+
+      <section id="about" class="section-card glass reveal">
+        <h2>About</h2>
+        <p>Hey 👋 I’m Deepanshu — a developer who turns caffeine into code.</p>
+        <p class="muted">
+          Currently pursuing B.Tech in Computer Science (AI/ML) at VIT Vellore,
+          I build intelligent systems using C/C++, Java, Python, AI APIs, and modern web technologies.
+        </p>
+
+        <p>I love:</p>
+        <ul class="love-list">
+          <li>Building AI-powered tools</li>
+          <li>Creating smooth, responsive, and interactive UI/UX</li>
+          <li>Solving complex algorithmic and real-world problems</li>
+          <li>Designing scalable backend architectures</li>
+          <li>Working with APIs and integrating intelligent systems</li>
+          <li>Exploring AI, automation, and emerging technologies</li>
+          <li>Optimizing performance and writing clean, efficient code</li>
+          <li>Turning creative ideas into production-ready applications</li>
+        </ul>
+      </section>
+
+      <section id="skills" class="section-card glass reveal">
+        <div class="section-head">
+          <h2>Skills</h2>
+          <p class="muted">A quick snapshot of what I use most while building.</p>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-card glass-soft">
+            <div class="skill-title">Core</div>
+            <div class="chips">
+              <span class="chip">C</span><span class="chip">C++</span><span class="chip">Java</span>
+              <span class="chip">Python</span><span class="chip">DSA</span>
+            </div>
+          </div>
+
+          <div class="skill-card glass-soft">
+            <div class="skill-title">Web</div>
+            <div class="chips">
+              <span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span>
+              <span class="chip">Django</span><span class="chip">APIs</span>
+            </div>
+          </div>
+
+          <div class="skill-card glass-soft">
+            <div class="skill-title">AI / CV</div>
+            <div class="chips">
+              <span class="chip">OpenCV</span><span class="chip">ML Basics</span>
+              <span class="chip">AI APIs</span><span class="chip">Computer Vision</span>
+            </div>
+          </div>
+
+          <div class="skill-card glass-soft">
+            <div class="skill-title">Tools</div>
+            <div class="chips">
+              <span class="chip">Git</span><span class="chip">GitHub</span><span class="chip">Linux</span><span class="chip">Postman</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="bars">
+          <div class="bar-row" data-bar="85">
+            <div class="bar-meta"><span>Frontend (HTML/CSS/JS)</span><span>85%</span></div>
+            <div class="bar"><span class="bar-fill"></span></div>
+          </div>
+          <div class="bar-row" data-bar="80">
+            <div class="bar-meta"><span>Backend (Django/APIs)</span><span>80%</span></div>
+            <div class="bar"><span class="bar-fill"></span></div>
+          </div>
+          <div class="bar-row" data-bar="78">
+            <div class="bar-meta"><span>DSA / Problem Solving</span><span>78%</span></div>
+            <div class="bar"><span class="bar-fill"></span></div>
+          </div>
+          <div class="bar-row" data-bar="72">
+            <div class="bar-meta"><span>AI / Computer Vision</span><span>72%</span></div>
+            <div class="bar"><span class="bar-fill"></span></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section-card glass reveal">
+        <div class="section-head">
+          <h2>Projects</h2>
+          <p class="muted">Clickable repos with stack + quick preview.</p>
+        </div>
+
+        <div class="projects-grid">
+          <a class="proj-card" href="https://github.com/anshh-4886/TrustChain-Local_using_BlockChain.git" target="_blank" rel="noopener noreferrer">
+            <div class="proj-top">
+              <div class="proj-title">
+                <img class="gh" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="">
+                <span>TrustChain Local (Blockchain)</span>
+              </div>
+              <div class="proj-cta"><span>View Repo</span><span class="arrow">→</span></div>
+            </div>
+            <p class="proj-desc">A trust-score + ledger system using blockchain concepts for secure records.</p>
+            <div class="chips">
+              <span class="chip">Blockchain</span><span class="chip">FinTech</span><span class="chip">Backend</span>
+            </div>
+          </a>
+
+          <a class="proj-card" href="https://github.com/anshh-4886/memory-Allocator-updated.git" target="_blank" rel="noopener noreferrer">
+            <div class="proj-top">
+              <div class="proj-title">
+                <img class="gh" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="">
+                <span>Memory Allocator</span>
+              </div>
+              <div class="proj-cta"><span>View Repo</span><span class="arrow">→</span></div>
+            </div>
+            <p class="proj-desc">Custom memory allocation logic with efficient handling and updates.</p>
+            <div class="chips">
+              <span class="chip">C</span><span class="chip">C++</span><span class="chip">DSA</span>
+            </div>
+          </a>
+
+          <a class="proj-card" href="https://github.com/anshh-4886/hand-tracking.git" target="_blank" rel="noopener noreferrer">
+            <div class="proj-top">
+              <div class="proj-title">
+                <img class="gh" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="">
+                <span>Hand Tracking</span>
+              </div>
+              <div class="proj-cta"><span>View Repo</span><span class="arrow">→</span></div>
+            </div>
+            <p class="proj-desc">Real-time hand tracking for gesture detection using computer vision.</p>
+            <div class="chips">
+              <span class="chip">Python</span><span class="chip">OpenCV</span><span class="chip">Computer Vision</span>
+            </div>
+          </a>
+
+          <a class="proj-card" href="https://github.com/anshh-4886/face-detection-open-cv.git" target="_blank" rel="noopener noreferrer">
+            <div class="proj-top">
+              <div class="proj-title">
+                <img class="gh" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="">
+                <span>Face Detection</span>
+              </div>
+              <div class="proj-cta"><span>View Repo</span><span class="arrow">→</span></div>
+            </div>
+            <p class="proj-desc">Face detection pipeline using OpenCV for fast real-time detection.</p>
+            <div class="chips">
+              <span class="chip">Python</span><span class="chip">OpenCV</span><span class="chip">ML</span>
+            </div>
+          </a>
+
+          <a class="proj-card" href="https://github.com/anshh-4886/Archery-game.git" target="_blank" rel="noopener noreferrer">
+            <div class="proj-top">
+              <div class="proj-title">
+                <img class="gh" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="">
+                <span>Archery Game</span>
+              </div>
+              <div class="proj-cta"><span>View Repo</span><span class="arrow">→</span></div>
+            </div>
+            <p class="proj-desc">A fun archery game with scoring and interactive gameplay mechanics.</p>
+            <div class="chips">
+              <span class="chip">Game</span><span class="chip">Logic</span><span class="chip">Frontend</span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section id="timeline" class="section-card glass reveal">
+        <div class="section-head">
+          <h2>Timeline</h2>
+          <p class="muted">Quick milestones of what I’ve built recently.</p>
+        </div>
+
+        <div class="timeline">
+          <div class="t-item">
+            <div class="t-dot"></div>
+            <div class="t-card glass-soft">
+              <div class="t-head">
+                <div class="t-title">TrustChain Local</div>
+                <div class="t-time muted">Blockchain + trust scoring</div>
+              </div>
+              <div class="muted">Built a secure, auditable trust ledger concept with practical scoring.</div>
+            </div>
+          </div>
+
+          <div class="t-item">
+            <div class="t-dot"></div>
+            <div class="t-card glass-soft">
+              <div class="t-head">
+                <div class="t-title">Computer Vision Projects</div>
+                <div class="t-time muted">Hand + Face detection</div>
+              </div>
+              <div class="muted">Real-time detection pipelines using OpenCV and Python.</div>
+            </div>
+          </div>
+
+          <div class="t-item">
+            <div class="t-dot"></div>
+            <div class="t-card glass-soft">
+              <div class="t-head">
+                <div class="t-title">Memory Allocator</div>
+                <div class="t-time muted">C/C++</div>
+              </div>
+              <div class="muted">Worked on efficient allocation logic and clean structuring.</div>
+            </div>
+          </div>
+
+          <div class="t-item">
+            <div class="t-dot"></div>
+            <div class="t-card glass-soft">
+              <div class="t-head">
+                <div class="t-title">Archery Game</div>
+                <div class="t-time muted">Logic + UI</div>
+              </div>
+              <div class="muted">Built interactive gameplay mechanics and scoring system.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section-card glass reveal">
+        <div class="section-head">
+          <h2>Contact</h2>
+          <p class="muted">Let’s build something clean and premium.</p>
+        </div>
+
+        <div class="contact-quick" aria-label="Quick contact">
+          <a class="icon-btn" href="https://wa.me/917905002880?text=Hi%20Deepanshu%2C%20I%20saw%20your%20portfolio%20and%20want%20to%20connect%20with%20you!" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp">
+            <span>WhatsApp</span>
+          </a>
+
+          <a class="icon-btn" href="mailto:guptadeepasnhu321@gmail.com?subject=Portfolio%20Inquiry&body=Hi%20Deepanshu%2C%20I%20visited%20your%20portfolio%20and%20would%20like%20to%20connect." aria-label="Email">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/gmail.svg" alt="Email">
+            <span>Email</span>
+          </a>
+        </div>
+
+        <form id="contactForm">
+          <input id="name" type="text" placeholder="Your Name" required>
+          <input id="email" type="email" placeholder="Your Email" required>
+          <textarea id="message" placeholder="Your Message" required></textarea>
+          <button class="btn primary" type="submit">Send</button>
+        </form>
+        <p id="formStatus" class="muted" style="margin-top:10px;"></p>
+      </section>
+
+      <footer class="section-card glass">
+        <div class="footer-strip">
+          <div class="muted">©️ 2026 Deepanshu</div>
+          <div class="footer-icons">
+            <a href="https://github.com/anshh-4886" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="">
+            </a>
+            <a href="https://www.linkedin.com/in/deepanshu-gupta-ba4076281" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="">
+            </a>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
